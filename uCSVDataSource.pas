@@ -3,14 +3,14 @@
 { @Author:            Lukáš Vlček [xnukes@gmail.com]    }
 { @Licence:           GNU General Public Licence 3.0    }
 { ----------------------------------------------------- }
-{ Co-author    : Christopohe Fontaine                   }
+{ Contributor  : Christopohe Fontaine                   }
 { Improvements :                                        }
 { - Every object created wasn't freed                   }
 { - Replacememt of GetLocaleFormatSettings, wich is     }
 {   deprecated in Delphi and not portable in FreePascal }
 { - Multiple load and save methods                      }
 { - Access fields by name or by index                   }
-{ - Browse the csv in the other direction               }
+{ - Browse the csv in both directions                   }
 { - Add or delete a line, or clear all data             }
 { - New method to create and load at the same time      }
 { Developments planned soon :                           }
