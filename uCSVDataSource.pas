@@ -41,6 +41,7 @@ type
     public
       constructor Create;
       constructor Create(FileName: ShortString; Delimiter: Char = ';');
+      constructor Create(List: TStringList; Delimiter: Char = ';');
       destructor Destroy; override;
 
       procedure LoadFromFile(const FileName: ShortString);
@@ -123,6 +124,13 @@ begin
   Self._rows.Free;
   Self._columns.Free;
   inherited Destroy;
+end;
+
+constructor TCSVDataSource.Create(List: TStringList; Delimiter: Char);
+begin
+  Self.Create;
+  Self.SetDelimiter(Delimiter);
+  Self.LoadFromList(List);
 end;
 
 procedure TCSVDataSource.LoadFromFile(const FileName: ShortString);
